@@ -9,6 +9,7 @@
     --info-input-color: #eed49f;
     --button-color1: #8aadf4;
     --button-color2: #91d7e3;
+    --ai-font-color: #f5e0dc;
 }
 
 /* Global Styles */
@@ -128,9 +129,19 @@ main {
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
+}
+
+/* Warning styles */
+#warning-container {
+    text-align: center;
+    padding-top: 50px;
+}
+#warning {
+    font-size: 2rem;
+    color: var(--time-input-color);
 }
 
 /* Time input styles */
@@ -309,4 +320,24 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .button:hover:after {
     transform: translateX(1em);
+}
+
+
+/* Ai styles */
+#ai-section {
+    width: 80%;
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: var(--main-bg-color);
+    margin: auto;
+    padding: 50px 80px;
+}
+
+#ai-section > h1 {
+    font-size: 4rem;
+}
+
+.ai-text {
+    font-size: 2.4rem;
+    color: var(--ai-font-color);
 }
