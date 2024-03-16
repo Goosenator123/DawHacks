@@ -84,7 +84,7 @@ function getValues(prompt) {
 
   if (allValuesProvided(wakeTime, sleepTime, startWork, endWork, travelTime)) { // If all required values are provided
     setWarningMessage('All values are provided. Proceeding with AI prompt...', '#a6da95'); // Display success message
-    sendRequest(prompt += (extraInfo.length != 0 ? ` Also include these activities in the schedule: ${extraInfo}, and add intervals of time in the schedule. Make sure to revolve the day around work` : '')); // Send user prompt to AI service
+    sendRequest(prompt += (extraInfo.length != 0 ? ` Also include these activities in the schedule after work: ${extraInfo}, and add intervals of time in the schedule. Make sure to revolve the day around work` : '')); // Send user prompt to AI service
     sendRequest(prompt += ' Finally, describe each sequence of hours thoroughly and explain why you chose to structure them in this manner.', true);
   } else {
     setWarningMessage('Some values are missing. Please fill in all required information.', 'red'); // Display error message
@@ -166,5 +166,3 @@ function createSchedule(message, sectionId, paragraphClass) {
 
   section.scrollIntoView({ behavior: 'smooth' }); // Scroll to the newly created section
 }
-
-
