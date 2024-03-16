@@ -100,7 +100,6 @@ function getExtraInfo() {
       extraInfo.push(input.value); // Add non-empty input values to extra info array
     }
   });
-  console.log(extraInfo.length);
   return extraInfo; // Return array of additional info
 }
 
@@ -117,7 +116,7 @@ function setWarningMessage(message, color) {
 
 // Function to send request to OpenAI API
 function sendRequest(prompt, create = false) {
-  const apiKey = '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'; // API key for OpenAI
+  const apiKey = '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'; // API key for OpenAI
   const endpoint = 'https://api.openai.com/v1/chat/completions'; // OpenAI API endpoint
 
   const data = {
@@ -139,7 +138,6 @@ function sendRequest(prompt, create = false) {
     .then(response => {
       const promptResponse = response.data.choices[0].message.content.trim();
       if (create) {
-        console.log(prompt);
         createSchedule(promptResponse, 'ai-section', 'ai-text'); // Create schedule based on AI response
       }
     })
